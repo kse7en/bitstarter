@@ -12,318 +12,535 @@
    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
           rel="stylesheet" type="text/css">
-      <style type="text/css">
+       <style type="text/css">
+/* Large desktop */
+@media (min-width: 980px) { 
+ body {
+    padding-top: 40px;
+ }
+ .linediv-l {
+    border-right: 1px white solid;
+  }
+  .linediv-r {
+    border-left: 1px white solid;
+  }
+ }
 
-      /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
-        }
-       .linediv-l {
-         border-right: 1px white solid;
-        }
-       .linediv-r {
-         border-left: 1px white solid;
-       }
-      }
+ /* Landscape phones and down */
+@media (max-width: 480px) { 
+ .copy {
+    padding: 2.5% 10%;
+  }
+ .linediv-l {
+    border-bottom: 1px white solid;
+  }
+ .linediv-r {
+    border-top: 1px white solid;
+  }
+ }
 
-      /* Landscape phones and down */
-      @media (max-width: 480px) { 
-       .copy {
-         padding: 2.5% 10%;
-       }
-       .linediv-l {
-         border-bottom: 1px white solid;
-       }
-       .linediv-r {
-         border-top: 1px white solid;
-       }
-      }
+/* iPads */ 
+@media (max-width: 979px) {
+ body {
+	padding-left: 0;
+	padding-right: 0;
+ }
+ .container {
+	padding-left: 20px;
+	padding-right: 20px;
+  }
+ .navbar-fixed-top {
+	margin-bottom: 0px;
+ }
+ .jumbotron {
+	padding: 20px 20px 20px 20px;
+ }
+}
 
-      /* All form factors */
+@media (max-width: 767px) {
+ .navbar-fixed-top .navbar-inner {
+	padding-left: 30px;
+	padding-right: 30px;
+ }
+}
 
-      /* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }
-      p.lead {
-        padding-top: 1.5%;
-        font-size: 24px;
-        line-height: 30px;
-      }
-      p {
-        font-size: 18px;
-        line-height: 24px;
-      }
+/* All form factors */
 
-      /* Video pitch and Action */
-      .pitch {
-        padding: 2.5% 0%;
-      }
-      .order {
-        padding: 2% 0%;
-      }
-      .actions {
-        background-color: #343434;
-        padding: 3% 0%;
-      }
-      .video, .thermometer, .order, .social, .statistics {
-        text-align: center;
-      }
-      .statistics h3, .statistics p {
-        color: white;
-      }
+/* Main body and headings */
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+  
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 760px;
+}
 
-      /* Marketing Copy and Footer */
-      .copy {
-        padding-top: 2.5%;
-        padding-bottom: 2.5%;
-        text-align: justify;
-      }
-      .asset {
-        padding: 2.5% 0%;
-      }
-      .footer {
-        color: #cccccc;
-        text-align: center;
-      }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
-      }
+.container-narrow-top {
+    margin: 0 auto;
+    max-width: 760px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #0C0D11;
+    background-color: #EEEEEE;
+    padding: 20px 0px 20px 0px;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* remove shadow forbottom line */
+.container-panel {
+    position: relative;
+    padding: 20px 0px 20px 0px;
+    color: #EEE;
+	background-color: #FFFFFF;
+   -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+	box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+ }
+
+/* http://css-tricks.com/perfect-full-page-background-image/*/
+
+.container-image {
+    position: relative;
+    padding: 20px 0px 20px 0px;
+    color: #000;
+    background-image: url('https://s3-us-west-2.amazonaws.com/cofindr-images/walk-2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*background-size: 1440px 2653px;*/
+    background-repeat:no-repeat;
+    background-color: #c3c3c3:;
+    /*display: compact;*/
+}
+.heading, .subheading {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+ p.lead {
+    padding-top: 1.5%;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.actions { 
+    padding: 3% 0%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+ }
+ .video, .thermometer, .order, .social, .statistics {
+    text-align: center;
+  }
+.statistics h3, .statistics p {
+    color: #0C0D11;
+ }
+.accordion a {
+    color: #942222;
+    font-size: 18px;
+ }
+ .white-background {
+    background-color: #FFFFFF;
+}
+.button-margin {
+    margin: 50px 0px 40px 0px;
+}
+.iconcolor {
+    color: #25857D;
+}
+
+/* Main marketing message and sign up button */
+.brand {
+   font-size: 30px; 
+}
+
+.jumbotron {
+    margin: 20px;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 54px;
+    line-height: 1;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 30px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+/* Marketing Copy and Footer */
+
+.copy {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    text-align: justify;
+ }
+.asset {
+    padding: 2.5% 0%;
+ }
+.footer {
+    color: #EEEEEE;
+    text-align: center;
+ }
+.footer p {
+    font-size: 11px;
+ }
+.footer a {
+    color: #ccccff;
+ }
+ 
+ /* change button color: http://twitterbootstrapbuttons.w3masters.nl/?color=%2325857D */
+.btn-custom-darken.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-custom-darken {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #21756e;
+  background-image: -moz-linear-gradient(top, #25857d, #1a5d58);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#25857d), to(#1a5d58));
+  background-image: -webkit-linear-gradient(top, #25857d, #1a5d58);
+  background-image: -o-linear-gradient(top, #25857d, #1a5d58);
+  background-image: linear-gradient(to bottom, #25857d, #1a5d58);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff25857d', endColorstr='#ff1a5d58', GradientType=0);
+  border-color: #1a5d58 #1a5d58 #09211f;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #1a5d58;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-custom-darken:hover,
+.btn-custom-darken:focus,
+.btn-custom-darken:active,
+.btn-custom-darken.active,
+.btn-custom-darken.disabled,
+.btn-custom-darken[disabled] {
+  color: #ffffff;
+  background-color: #1a5d58;
+  *background-color: #144945;
+}
+.btn-custom-darken:active,
+.btn-custom-darken.active {
+  background-color: #0f3532 ;
+}
+
+.btn-customred-darken.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-customred-darken {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #ad3232;
+  background-image: -moz-linear-gradient(top, #bd3737, #952c2c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd3737), to(#952c2c));
+  background-image: -webkit-linear-gradient(top, #bd3737, #952c2c);
+  background-image: -o-linear-gradient(top, #bd3737, #952c2c);
+  background-image: linear-gradient(to bottom, #bd3737, #952c2c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd3737', endColorstr='#ff952c2c', GradientType=0);
+  border-color: #952c2c #952c2c #5a1a1a;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #952c2c;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-customred-darken:hover,
+.btn-customred-darken:focus,
+.btn-customred-darken:active,
+.btn-customred-darken.active,
+.btn-customred-darken.disabled,
+.btn-customred-darken[disabled] {
+  color: #ffffff;
+  background-color: #952c2c;
+  *background-color: #822626;
+}
+.btn-customred-darken:active,
+.btn-customred-darken.active {
+  background-color: #6e2020 ;
+}
     </style>
   </head>
-  <body>
+   <body>
   
     <!-- Mobile-friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Cofindr</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
-    <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
-    <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-        <div class="span12">
-          <h1>CoFindr</h1>
-        </div>
-      </div> 
-      <div class="row-fluid subheading">
-        <div class="span12">
-          <!-- Special typography from Bootstrap for lead paragraph. -->
-          <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">Share the cost of building a home</p>
-        </div>
-      </div>
-      <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-        <a href="http://www.flickr.com/photos/9160678@N06/2530059183/" title="Toritsudaigaku cooperative house by scarletgreen, on Flickr">
-        <img class="img-polaroid" src="http://farm4.staticflickr.com/3095/2530059183_29e4e26915.jpg" width="500" height="333" alt="META18.jpg"></a>
-          
-        </div>
-        
-      <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
-          <div class="span8 offset2">
-            <div class="statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>100</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $40,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>100</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="span10 offset1">  
-                    <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 15%;"></div>
-              <div class="bar bar-warning" style="width: 85%;"></div>
-            </div>
-          </div>
-       <div class="span6 offset3 order">
-            <!-- Standard Bootstrap button. -->
-            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Find Now</button>
-          </div>
-          <div class="span8 offset2 social">
-            <!-- Social buttons are not included in default Bootstrap. -->
-            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
-        </div>
-      </div> 
-          <!-- Beyond this part the marketing copy begins. -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
-      <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
-      <!-- http://placehold.it -->
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-        <a href="http://www.flickr.com/photos/lydiashiningbrightly/2996695836/" title="Vicroft Court : Starley Housing Co-op by lydia_shiningbrightly, on Flickr">
-        <img class="img-polaroid" src="http://farm4.staticflickr.com/3139/2996695836_4ca05ef994.jpg" width="500" height="375" alt="Vicroft Court : Starley Housing Co-op"></a>
-                   
-        </div>
-        <div class="span5 copy">
-          <p>
-		Wanting to build your own home? Looking at the housing market and finding it too expensive?</p>
-		  		
-		<p>
-		Why not look for others who are in the same situation? Share the cost of building a 
-		home. Form a housing cooperative and get started.</p>
-		<p>
-		CoFindr will help you find future home owners in your area. 
-		Set up your community today: 
-		Describe your ideal housing project and promote it via social networks.
-		
-          </p>
-        </div>
-      </div>
-
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>
-          Your future neighbours can register on your community board and add to your dream.</p>
-      <p>    
-		Create a cooperative outline, add and vote on ideas. Work together on the structure or architecture and discuss details.
-		Get to know each other while making the dream more and more real.
-	</p>
-	<p>Use the event calendar to plan meetings and set important milestones</p>
-	<p>Use CoFindr's draft coop documents and wiki as help when creating your own articles of cooperation.</p>
-        </div>
-        <div class="span5 asset">
-        <a href="http://www.flickr.com/photos/9160678@N06/2522889119/" title="META04.jpg by scarletgreen, on Flickr">
-        <img class="img-polaroid" src="http://farm4.staticflickr.com/3151/2522889119_c9cf91d644.jpg" width="500" height="333" alt="META04.jpg"></a>
-      
-        </div>
-      </div>
-          <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
-      <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
-      <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
-      <div class="row-fluid faq">
-          <div class="span10 offset1">
-            <h3>FAQ</h3>
-            <div class="accordion" id="accordion2">
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseOne">
+    
+ <div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="#">CoFindr</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li class="active">
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+</div>
+<div class="container-panel">
+	<div class="container-narrow-top">
+		<div class="jumbotron">
+			<h1>
+				CoFindr: Find and Share
+			</h1>
+			<p class="lead">
+				Share the cost of building a home: Set up a housing cooperative in CoFindr,
+				search for members in your area and get closer to owning a home with each
+				step. CoFindr will give you the tools to to promote your project.
+			</p>
+			<a class="btn btn-large btn-customred-darken" href="#">Sign up today</a>
+		</div>
+	</div>
+</div>
+<div class="container-image">
+	<div class="container-narrow">
+		<div class="row-fluid marketing">
+			<div class="span8 copy copy-left">
+				<h4>
+					<i class="icon-home iconcolor icon-4x"></i>
+					Start A Cooperative
+				</h4>
+				<p class="copy">
+					Create your cooperative page in CoFindr. Use one of the templates to describe
+					your project, size and location. Upload photos and plans, add more detail.
+				</p>
+			</div>
+			<div class="span4 asset">
+					<img src="https://s3-us-west-2.amazonaws.com/cofindr-images/stickStart.png" width="350" height="300" class="img-polaroid"
+				alt="Share">
+			</div>
+		</div>
+		<div class="row-fluid marketing">
+			<div class="span8 copy copy-left">
+				<h4>
+					<i class="icon-comment iconcolor icon-4x"></i>
+					Promote Your Project
+				</h4>
+				<p class="copy">
+					Use CoFindr's social share feature to promote your public project page.
+					New members can ask questions and join your project.
+				</p>
+			</div>
+			<div class="span4 asset">
+			<img src="https://s3-us-west-2.amazonaws.com/cofindr-images/stickPromote.png" width="350" height="300" class="img-polaroid"
+				alt="Promote">
+			</div>
+		</div>
+		<div class="row-fluid marketing">
+			<div class="span8 copy copy-left">
+				<h4>
+					<!-- change to icon-group -->
+					<i class="icon-group iconcolor icon-4x"></i>
+					Cooperate and Share
+				</h4>
+				<p class="copy">
+					Use CoFindr's private idea boards to discuss details like designs, location
+					and leagal structure. Only project members can contribute, vote on ideas
+					and comment.
+				</p>
+			</div>
+			<div class="span4 asset">
+					<img src="https://s3-us-west-2.amazonaws.com/cofindr-images/stickCoop.png" width="350" height="300" class="img-polaroid"
+				alt="Share">
+			</div>
+		</div>
+		<div class="row-fluid marketing">
+			<div class="span8 copy copy-left">
+				<h4>
+					<i class="icon-heart iconcolor icon-4x"></i>
+					Support CoFindr
+				</h4>
+				<div class="statistics">
+					<div class="span4">
+						<!-- linediv-l and linediv-r give dividing lines that look different in
+						horizontal and vertical layouts, illustrating media queries. -->
+						<div class="linediv-l">
+							<h3>
+								100
+							</h3>
+							<p>
+								backers
+							</p>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="linediv-c">
+							<h3>
+								$6000
+							</h3>
+							<p>
+								of $40,000
+							</p>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="linediv-r">
+							<h3>
+								100
+							</h3>
+							<p>
+								days left
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="span10 offset1">
+					<!-- Bootstrap progress bar -->
+					<!-- http://twitter.github.io/bootstrap/components.html#progress -->
+					<div class="progress progress-danger">
+						<div class="bar" style="width: 10%">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span4 asset">
+				<div class="span12 order">
+					<!-- Standard Bootstrap button. -->
+					<!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+					<button class="btn btn-large btn-customred-darken button-margin">
+						Sign up today
+					</button>
+				</div>
+				<div class="span12 social">
+					<!-- Social buttons are not included in default Bootstrap. -->
+					<!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+					<button class="btn btn-twitter">
+						<i class="icon-twitter"></i>
+						<a href="https://twitter.com/bsSocialButtons" class="twitter-follow-button" data-show-count="false">  | Twitter</a>
+					</button>
+					<button class="btn btn-facebook">
+						<i class="icon-facebook"></i>
+						| Facebook
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- For the FAQ, we introduce a little bit of JS, using the accordion.
+		-->
+		<!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+		<!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+		<div class="row-fluid faq">
+			<div class="span12">
+				<h3>
+					FAQ
+				</h3>
+				<div class="accordion" id="accordion2">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+							href="#collapseOne">
                     Why a Housing Cooperative?
                   </a>
-                </div>
-                <div id="collapseOne" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    Housing cooperatives are a well known alternative ownership model.  
-                    Cooperatives are less expensive than other forms of housing, e.g.apartments, because they operate on an at-cost basis, 
-                    collecting money from residents just to cover the cost. 
-                    With rising cost of owning a home in most cities, this is an attractive option for many families.
-                  </div>
-                </div>
-              </div>
-               <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseTwo">
-                    What exactly is a Housing Cooperative?
+						</div>
+						<div id="collapseOne" class="accordion-body in collapse" style="height: auto;">
+							<div class="accordion-inner">
+								Housing cooperatives are a well known alternative ownership model. Housing
+								Cooperatives are less expensive than other forms of housing. They operate
+								on a at-cost basis, collecting money only to cover the cost.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+							href="#collapseTwo">
+                    How does shared ownership work?
                   </a>
-                </div>
-                <div id="collapseTwo" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    In a Housing Cooperative the property is owned by an organization and then sold as shares to 
-                    the residents of the community. As a shareholder, you are entitled to exclusive use of a housing unit in the property. 
-                    Cooperative housing is not simply a purchase of real estate and a place to live: it also includes
-                     obligations and opportunity to involve yourself in the governance, organization and activities of the community.
-                  </div>
-                </div>
-              </div>
-                 <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseThree">
-                    Is this only for Hippies? How is this different from Communes?
+						</div>
+						<div id="collapseTwo" class="accordion-body collapse" style="height: 0px;">
+							<div class="accordion-inner">
+								Usually all property is owned by an organisation (the cooperative). Coop
+								members are shareholders and often entitled to live in one of the units
+								against rent or upfront payment.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+							href="#collapseThree">
+                    Who is this for?
                   </a>
-                </div>
-                <div id="collapseThree" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                   Housing Cooperatives area well structured and regulated shared ownership model. 
-                   They can be as close and as far away from traditional apartment living or a commune as you define it.
-                     
-                  </div>
-                </div>
-              </div>
-              
-              <div class="accordion-group">
-                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"
-                     data-parent="#accordion2" href="#collapseFour">
+						</div>
+						<div id="collapseThree" class="accordion-body collapse" style="height: 0px;">
+							<div class="accordion-inner">
+								A Housing Cooperative is a well structured and regulated ownership model
+								that is used all over the world, in cities as diverse as Tokyo and Toronto.
+								The model works for hippies, hipsters, families and urbanites.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+							href="#collapseFour">
                     How does CoFindr help me?
                   </a>
-                </div>
-                <div id="collapseFour" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    CoFindr want's to connect people in the same area who are looking 
-                    for a housing cooperative or want to start their own project. The most difficult 
-                    part is often to find the right people. We are giving you the tools to make the promotion of 
-                    your ideas easier.
-                    And our knowledge base and discussion forums can guide you through the process.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>  
-      
-       <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
-      <!-- http://creativecommons.org/licenses/ -->
-      <div class="row-fluid footer">
-        <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+						</div>
+						<div id="collapseFour" class="accordion-body collapse" style="height: 0px;">
+							<div class="accordion-inner">
+								CoFindr want's to connect people in the same area who are looking for
+								a housing cooperative or want to start their own project. The most difficult
+								part is often to find the right people. We are giving you the tools to
+								make the promotion of your ideas easier. And our knowledge base and discussion
+								forums can guide you through the process.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row-fluid footer">
+			<div class="span12">
+				<p>
+					This work is licensed under the
+					<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
               By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
-        </div>
-      </div>
-    </div>
+            </a>
+					CoFindr 2013
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /container -->
   </body>
 </html>
