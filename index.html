@@ -162,6 +162,17 @@ p {
  }
  .video, .thermometer, .order, .social, .statistics {
     text-align: center;
+}
+ .asset-row {
+      position:relative;
+  }
+ .asset-bottom {
+      position: absolute;
+      bottom: 16px;
+      right: 0;
+  }
+  .asset-padding {
+      padding: 20px 0px 20px 0px;
   }
 .statistics h3, .statistics p {
     color: #0C0D11;
@@ -425,7 +436,7 @@ div.addthis_toolbox {
 				alt="Share">
 			</div>
 		</div>
-		<div class="row-fluid marketing">
+		<div class="row-fluid marketing asset-row">
 			<div class="span8 copy copy-left">
 				<h4>
 					<i class="icon-heart iconcolor icon-4x"></i>
@@ -474,15 +485,12 @@ div.addthis_toolbox {
 					</div>
 				</div>
 			</div>
-			<div class="span4 asset">
+			<div class="span4 asset asset-bottom">
 				<div class="span12 order">
-					<!-- Standard Bootstrap button. -->
-					<!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-					<button class="btn btn-large btn-customred-darken button-margin">
-						Sign up today
-					</button>
+				<a class="coinbase-button button-margin" data-code="81b19b684942b96c749f786a38d2c394" data-button-style="custom_large" data-button-text="Preorder with Bitcoin" href="https://coinbase.com/checkouts/81b19b684942b96c749f786a38d2c394">Preorder With Bitcoin</a>
+				<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
 				</div>
-				<div class="span12 social">
+				<div class="span12 order asset-padding">
 				<!-- AddThis Button BEGIN -->
 				<div class="addthis_toolbox addthis_default_style addthis_16x16_style">
 					<a class="addthis_button_facebook"></a>
